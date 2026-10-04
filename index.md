@@ -8,3 +8,5 @@ layout: home
 Testing LaTeX integration:
 $\int_a^bf(x)\,dx = F(b) - F(a)$
 $$\int_a^bf(x)\,dx = F(b) - F(a)$$
+\( \int_a^bf(x)\,dx = F(b) - F(a) \)
+\[ \int_a^bf(x)\,dx = F(b) - F(a) \]
