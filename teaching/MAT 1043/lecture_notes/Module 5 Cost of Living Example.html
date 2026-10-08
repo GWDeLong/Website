@@ -1,0 +1,108 @@
+<h2>Module 5: Cost of Living Example</h2>
+<hr />
+<h3 style="text-align: center;">Example</h3>
+<p>Suppose we are job hunting again and extend our search to outside of Texas, below are other job offers.</p>
+<table style="border-collapse: collapse; width: 75%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>City Comparisons</caption>
+    <tbody>
+        <tr>
+            <th style="width: 24.9786%;" scope="col"></th>
+            <th style="width: 24.9786%;" scope="col">Austin (AUS)</th>
+            <th style="width: 24.9786%;" scope="col">New York City (NYC)</th>
+            <th style="width: 24.9786%;" scope="col">Denver (DEN)</th>
+        </tr>
+        <tr>
+            <th style="width: 24.9786%;" scope="row">Salary Offer</th>
+            <td style="width: 24.9786%;">$70,000</td>
+            <td style="width: 24.9786%;">$120,000</td>
+            <td style="width: 24.9786%;">$85,000</td>
+        </tr>
+        <tr>
+            <th style="width: 24.9786%;" scope="row">Cost of Living</th>
+            <td style="width: 24.9786%;">$50,000</td>
+            <td style="width: 24.9786%;">$100,000</td>
+            <td style="width: 24.9786%;">$60,000</td>
+        </tr>
+    </tbody>
+</table>
+<p>Computing our cost of living ratios \(\)</p>
+<p><strong>Austin Ratios:</strong></p>
+<p>\begin{align*}<br />\text{AUS }\to\text{NYC} &amp;= \frac{$50,000 \text{ AUS}}{$100,000 \text{ NYC}} = \frac{0.50 \text{ AUS}}{1 \text{ NYC}} \\[2pt]<br />\text{AUS }\to\text{DEN} &amp;= \frac{$50,000 \text{ AUS}}{$60,000 \text{ DEN}} = \frac{0.83 \text{ AUS}}{1 \text{ DEN}}<br />\end{align*}</p>
+<p><strong>New York City Ratios:</strong></p>
+<p>\begin{align*}<br />\text{NYC }\to\text{AUS} &amp;= \frac{$100,000 \text{ NYC}}{$50,000 \text{ AUS}} = \frac{2 \text{ NYC}}{1 \text{ AUS}} \\[2pt]<br />\text{NYC }\to\text{DEN} &amp;= \frac{$100,000 \text{ NYC}}{$60,000 \text{ DEN}} = \frac{1.67 \text{ NYC}}{1 \text{ DEN}}<br />\end{align*}</p>
+<p><strong>Denver Ratios:</strong></p>
+<p>\begin{align*}<br />\text{DEN }\to\text{AUS} &amp;= \frac{$60,000 \text{ DEN}}{$50,000 \text{ AUS}} = \frac{1.20 \text{ DEN}}{1 \text{ AUS}} \\[2pt]<br />\text{DEN }\to\text{NYC} &amp;= \frac{$60,000 \text{ DEN}}{$100,000 \text{ NYC}} = \frac{0.60 \text{ DEN}}{1 \text{ NYC}}<br />\end{align*}</p>
+<p>We now build our table while noting that we already know the salary in each city.</p>
+<table style="border-collapse: collapse; width: 75%; margin-left: auto; margin-right: auto; height: 114px;" border="1">
+    <caption>Salary Comparison Table</caption>
+    <tbody>
+        <tr style="height: 27px;">
+            <th style="width: 25%; height: 27px;" scope="col"></th>
+            <th style="width: 25%; height: 27px;" scope="col">AUS Salary</th>
+            <th style="width: 25%; height: 27px;" scope="col">NYC Salary</th>
+            <th style="width: 25%; height: 27px;" scope="col">DEN Salary</th>
+        </tr>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="row">Value in AUS</th>
+            <td style="width: 25%; height: 29px; text-align: left;">$70,000</td>
+            <td style="width: 25%; text-align: center; height: 29px;">-</td>
+            <td style="width: 25%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="row">Value in NYC</th>
+            <td style="width: 25%; text-align: center; height: 29px;">-</td>
+            <td style="width: 25%; height: 29px; text-align: left;">$120,000</td>
+            <td style="width: 25%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="row">Value in DEN</th>
+            <td style="width: 25%; text-align: center; height: 29px;">-</td>
+            <td style="width: 25%; text-align: center; height: 29px;">-</td>
+            <td style="width: 25%; height: 29px; text-align: left;">$85,000</td>
+        </tr>
+    </tbody>
+</table>
+<p>Working through the dimensional analysis for each salary equivalence below filling the table left to right, top to bottom.</p>
+<p><strong>New York City Salary to Austin Cost of Living:</strong></p>
+<p>\[ \begin{matrix} $120,000 \text{ NYC} &amp; \Big| &amp; 0.50 \text{ AUS} \\<br />\hline &amp; \Big| &amp; 1 \text{ NYC}&nbsp; \end{matrix} <br />= $60,000 \text{ AUS}\]</p>
+<p><strong>Denver Salary to Austin Cost of Living:</strong></p>
+<p>\[ \begin{matrix} $85,000 \text{ DEN} &amp; \Big| &amp; 0.83 \text{ AUS} \\<br />\hline &amp; \Big| &amp; 1 \text{ DEN}&nbsp; \end{matrix} <br />= $70,550 \text{ AUS}\]</p>
+<p><strong>Austin Salary to New York City Cost of Living:</strong></p>
+<p>\[ \begin{matrix} $70,000 \text{ AUS} &amp; \Big| &amp; 2 \text{ NYC} \\<br />\hline &amp; \Big| &amp; 1 \text{ AUS}&nbsp; \end{matrix} <br />= $140,000 \text{ NYC}\]</p>
+<p><strong>Denver Salary to New York City Cost of Living:</strong></p>
+<p>\[ \begin{matrix} $85,000 \text{ DEN} &amp; \Big| &amp; 1.67 \text{ NYC} \\<br />\hline &amp; \Big| &amp; 1 \text{ DEN}&nbsp; \end{matrix} <br />= $141,950 \text{ NYC}\]</p>
+<p><strong>Austin Salary to Denver Cost of Living:</strong></p>
+<p>\[ \begin{matrix} $70,000 \text{ AUS} &amp; \Big| &amp; 1.20 \text{ DEN} \\<br />\hline &amp; \Big| &amp; 1 \text{ AUS}&nbsp; \end{matrix} <br />= $84,000 \text{ DEN}\]</p>
+<p><strong>New York City Salary to Denver Cost of Living:</strong></p>
+<p>\[ \begin{matrix} $120,000 \text{ NYC} &amp; \Big| &amp; 0.60 \text{ DEN} \\<br />\hline &amp; \Big| &amp; 1 \text{ NYC}&nbsp; \end{matrix} <br />= $72,000 \text{ DEN}\]</p>
+<p>Filling in our table:</p>
+<table style="border-collapse: collapse; width: 75%; margin-left: auto; margin-right: auto; height: 114px;" border="1">
+    <caption>Salary Comparison Table</caption>
+    <tbody>
+        <tr style="height: 27px;">
+            <th style="width: 25%; height: 27px;" scope="col"></th>
+            <th style="width: 25%; height: 27px;" scope="col">AUS Salary</th>
+            <th style="width: 25%; height: 27px;" scope="col">NYC Salary</th>
+            <th style="width: 25%; height: 27px;" scope="col">DEN Salary</th>
+        </tr>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="row">Value in AUS</th>
+            <td style="height: 29px;">$70,000</td>
+            <td style="width: 25%; height: 29px;">$60,000</td>
+            <td style="width: 25%; height: 29px; background-color: #bfedd2;">$70,550</td>
+        </tr>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="row">Value in NYC</th>
+            <td style="height: 29px;">$140,000</td>
+            <td style="width: 25%; height: 29px;">$120,000</td>
+            <td style="width: 25%; height: 29px; background-color: #bfedd2;">$141,950</td>
+        </tr>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="row">Value in DEN</th>
+            <td style="height: 29px;">$84,000</td>
+            <td style="width: 25%; height: 29px;">$72,000</td>
+            <td style="width: 25%; height: 29px; background-color: #bfedd2;">$85,000</td>
+        </tr>
+    </tbody>
+</table>
+<p>Hence, looking at the highest column, we that the Denver Salary gets us the most value for our money.</p>

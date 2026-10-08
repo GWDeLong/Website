@@ -1,0 +1,102 @@
+<h2>Module 4: Conditional and Dependent Probabilities</h2>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lecture</h3>
+<ul>
+    <li>Dependent and Conditional Probability</li>
+    <li>The Classical Example</li>
+    <li>Dependent AND</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p>Before we discussed how to find the likelihood of an events occurring when those events had no influence over one another. Now we talk about the other case; we ask 'What happens when events are dependent on one another?'</p>
+<hr />
+<h3 style="text-align: center;">Dependent and Conditional Probability</h3>
+<p>First, we define dependency.</p>
+<h4><span style="text-decoration: underline;">Definition (Dependent Probability).</span></h4>
+<blockquote>
+    <p>Two or more events are called&nbsp;<em>dependent&nbsp;</em>if the occurrence of one event influences the other events.</p>
+</blockquote>
+<p>The computation of these probabilities is very similar to the dependent case, however we introduce the conditional.&nbsp;</p>
+<h4><span style="text-decoration: underline;">Definition (Conditional Probability).</span></h4>
+<blockquote>
+    <p>The probability of event \( A \) happening, given that event \( B \) has already happened.</p>
+</blockquote>
+<p>We denote this probability as</p>
+<p>\[ P( A \mid B ) \]</p>
+<p>read "The probability of \(A\), given \(B\)."</p>
+<hr />
+<h3 style="text-align: center;">The Classical Example</h3>
+<p>Likely the most common example of dependence is the bag of marbles example.</p>
+<p>Suppose we have a bag of colored marbles, when we pick a marble, we remove that marble from the bag. The composition of the bag is given by the table below.</p>
+<table style="border-collapse: collapse; width: 24.9786%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Marble Bag Contents</caption>
+    <tbody>
+        <tr>
+            <th style="width: 50.1288%; text-align: center;" scope="col">Marble Color</th>
+            <th style="width: 50.1288%; text-align: center;" scope="col">Count</th>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Red</td>
+            <td style="width: 50.1288%; text-align: center;">5</td>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Blue</td>
+            <td style="width: 50.1288%; text-align: center;">2</td>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Green</td>
+            <td style="width: 50.1288%; text-align: center;">3</td>
+        </tr>
+    </tbody>
+</table>
+<p>We want to know the probabilities of drawing certain marbles.</p>
+<p><strong>What is the probability of drawing a blue marble from the bag?</strong></p>
+<p>As before, we know that the probability of a single event is the quotient of the successes and the total number of possibilities, therefore&nbsp;</p>
+<p>\[ P(\text{Blue}) = \frac{2 \text{ Blue Marbles}}{10 \text{ Total Marbles}}. \]</p>
+<p><strong>Now, after taking the blue marble out, what is the probability of drawing a green marble?</strong></p>
+<p>This is the conditional probability that we discussed specifically the probability of drawing a green, given a blue has been drawn. We find</p>
+<p>\[ P(\text{Green} \mid \text{Blue}) = &nbsp;\frac{3 \text{ Green Marbles}}{9 \text{ Total Marbles}}\begin{matrix}\\ \rightarrow \text{ The total minus the one removed} \end{matrix}. \]</p>
+<p>Indeed, we find that the probability has changed.</p>
+<hr />
+<h3 style="text-align: center;">Dependent AND</h3>
+<p>We compute the probability of two dependent events \( A \) and \( B \), one occurring after the other as the product of first probability and the conditional of the second, i.e.,&nbsp;</p>
+<p>\[P( A \text{ AND } B) = P(A)\cdot P(B \mid A). \]</p>
+<p>Below are some examples of the dependent AND.</p>
+<h4><span style="text-decoration: underline;">Example.</span></h4>
+<p>Suppose we have a bag of colored marbles with the following composition.</p>
+<table style="border-collapse: collapse; width: 24.9786%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Marble Bag Contents</caption>
+    <tbody>
+        <tr>
+            <th style="width: 50.1288%; text-align: center;" scope="col">Marble Color</th>
+            <th style="width: 50.1288%; text-align: center;" scope="col">Count</th>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Black</td>
+            <td style="width: 50.1288%; text-align: center;">10</td>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Blue</td>
+            <td style="width: 50.1288%; text-align: center;">5</td>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Red</td>
+            <td style="width: 50.1288%; text-align: center;">3</td>
+        </tr>
+        <tr>
+            <td style="width: 50.1288%; text-align: center;">Green</td>
+            <td style="width: 50.1288%; text-align: center;">2</td>
+        </tr>
+    </tbody>
+</table>
+<p><strong>If we draw marbles with removal (rather than replacing them), what is the probability of drawing a black marble first and a blue marble second?</strong></p>
+<p>Applying our rule</p>
+<p>\begin{align*} <br />P(\text{Black AND Blue}) &amp;= P(\text{Black})\cdot P(\text{Blue} \mid \text{Black}) \\<br />&amp;= \dfrac{10 \text{ Black}}{20 \text{ Total}}\cdot\dfrac{5 \text{ Blue}}{19 \text{ Total}} = \dfrac{50}{380}<br />\end{align*}</p>
+<p>Therefore the probability of drawing a black and a blue marble is 5/38 or approximately 13.16%.</p>
+<h4><span style="text-decoration: underline;">Note.</span></h4>
+<p>The AND operation does not change with the order of statements, this is because of the commutativity of multiplication, particularly in the denominator, for instance we observe</p>
+<p>\[ P(\text{Blue AND Black}) = P(\text{Blue})\cdot P(\text{Black} \mid \text{Blue}) = \frac{5}{20}\cdot\frac{10}{19} = \frac{5}{38} = P(\text{Black AND Blue}). \]</p>
+<p>We also ask what happens when we have multiple AND statements. Our answer, we follow the same pattern, returning to our previous example, we find</p>
+<p>\[ P(\text{Black AND Blue AND Green}) = \frac{10 \text{ Black}}{20 \text{ Total}}\cdot\frac{5 \text{ Blue}}{19 \text{ Total}}\cdot\frac{2 \text{ Green}}{18 \text{ Total}} = \frac{100}{6080}. \]</p>
+<p>Thus ends module 4.</p>
+<p>&nbsp;</p>

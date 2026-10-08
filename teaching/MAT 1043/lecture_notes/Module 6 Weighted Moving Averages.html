@@ -1,0 +1,186 @@
+<h2>Module 6: Weighted Moving Averages</h2>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lectures</h3>
+<ul>
+    <li>Weighted Moving Averages</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p>So far we have worked with data that is stagnant, doing analysis on all of the data instead of paying attention on how the data evolves over time. We now introduce an average which makes erratic data smooth.</p>
+<hr />
+<h3 style="text-align: center;">Weighted Moving Averages</h3>
+<p>These averages are primarily used in forecasting and trend analysis where recent data is more relevant, we will weight the average so it leans more toward recent events.</p>
+<h4><span style="text-decoration: underline;">Definition (Weighted Moving Average).</span></h4>
+<blockquote>
+    <p>An average taken over \( n \) data values with increasing weights from 1 to \( n \), denoted \( \operatorname{WMA}( D ) \) where \( D \) is our data set.</p>
+</blockquote>
+<p>Our general formula for the weighted moving average of length \( n \) is</p>
+<p>\[ \operatorname{WMA}(D) = \frac{\text{Data Value 1 }(1) + \text{Data Value 2 }(2) + \dots + \text{Data Value n }(n)}{1 + 2 + \dots + n}. \]</p>
+<h4><span style="text-decoration: underline;">Note.</span></h4>
+<blockquote>
+    <p>For the first few entries -- depending on the size of our average -- will not have an average.&nbsp;</p>
+</blockquote>
+<p>Below is a graph including a weighted moving average, and a simple weighted average (which is an average taken without weights), behind the line, we have the data.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://utsa.instructure.com/courses/86233/files/16031374/preview" alt="A graph of a weighted moving average smoothing erratic data" width="75%" height="75%" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/files/16031374" data-api-returntype="File" /></p>
+<p>We now consider some examples.</p>
+<h4><span style="text-decoration: underline;">Example 1.</span></h4>
+<p>Suppose we want to find a moving weighted average of length \( n = 3 \) for the following data set</p>
+<table style="border-collapse: collapse; width: 25%; margin-left: auto; margin-right: auto; height: 172px;" border="1">
+    <caption>Data Table</caption>
+    <tbody>
+        <tr style="height: 27px;">
+            <th style="width: 49.9572%; height: 27px;" scope="col">Index</th>
+            <th style="width: 49.9572%; height: 27px;" scope="col">Data Value</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 49.9572%; text-align: center; height: 29px;">1</td>
+            <td style="width: 49.9572%; text-align: center; height: 29px;">5</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 49.9572%; text-align: center; height: 29px;">2</td>
+            <td style="width: 49.9572%; text-align: center; height: 29px;">3</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 49.9572%; text-align: center; height: 29px;">3</td>
+            <td style="width: 49.9572%; text-align: center; height: 29px;">6</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 49.9572%; text-align: center; height: 29px;">4</td>
+            <td style="width: 49.9572%; text-align: center; height: 29px;">5</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 49.9572%; text-align: center; height: 29px;">5</td>
+            <td style="width: 49.9572%; text-align: center; height: 29px;">9</td>
+        </tr>
+    </tbody>
+</table>
+<p>Calculating our first weighted average, we take the first 3 values 5, 3, 6 weight them appropriately and divide by the sum of the weights, i.e.,&nbsp;</p>
+<p>\[ \frac{5 (1) + 3 (2) + 6 (3)}{1 + 2 + 3} = \frac{29}{6} \approx 4.83 \]</p>
+<p>We will record this in our table later. We now do so for the next three data values</p>
+<p>\[ \frac{3 (1) + 6 (2) + 5 (3)}{1 + 2 + 3} = \frac{43}{6} = 5 \]</p>
+<p>Lastly</p>
+<p>\[ \frac{6 (1) + 5 (2) + 9 (3)}{1 + 2 + 3} = \frac{30}{6} = 7.17. \]</p>
+<p>Hence in our table we have</p>
+<table style="border-collapse: collapse; width: 50%; height: 172px; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Data Table</caption>
+    <tbody>
+        <tr style="height: 27px;">
+            <th style="width: 34.7901%; height: 27px;" scope="col">Index</th>
+            <th style="width: 34.6336%; height: 27px;" scope="col">Data Value</th>
+            <th style="width: 30.662%; height: 27px;" scope="col">WMA</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 34.7901%; text-align: center; height: 29px;">1</td>
+            <td style="width: 34.6336%; text-align: center; height: 29px;">5</td>
+            <td style="width: 30.662%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 34.7901%; text-align: center; height: 29px;">2</td>
+            <td style="width: 34.6336%; text-align: center; height: 29px;">3</td>
+            <td style="width: 30.662%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 34.7901%; text-align: center; height: 29px;">3</td>
+            <td style="width: 34.6336%; text-align: center; height: 29px;">6</td>
+            <td style="width: 30.662%; text-align: center; height: 29px;">4.83</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 34.7901%; text-align: center; height: 29px;">4</td>
+            <td style="width: 34.6336%; text-align: center; height: 29px;">5</td>
+            <td style="width: 30.662%; text-align: center; height: 29px;">5</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 34.7901%; text-align: center; height: 29px;">5</td>
+            <td style="width: 34.6336%; text-align: center; height: 29px;">9</td>
+            <td style="width: 30.662%; text-align: center; height: 29px;">7.17</td>
+        </tr>
+    </tbody>
+</table>
+<p><span style="text-decoration: underline;">Example 2.</span></p>
+<p>We will take a weighted moving average of length \( n = 4 \) on the following data set.</p>
+<table style="border-collapse: collapse; width: 24.9786%; margin-left: auto; margin-right: auto; height: 278px;" border="1">
+    <caption>Data Table</caption>
+    <tbody>
+        <tr style="height: 75px;">
+            <th style="width: 50.2071%; height: 75px;" scope="col">Year</th>
+            <th style="width: 49.7929%; height: 75px;" scope="col">Box Office Sales (Thousands)</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2020</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">3</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2021</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">5</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2022</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">3</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2023</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">2</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2024</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">4</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2025</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">9</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 50.2071%; text-align: center; height: 29px;">2026</td>
+            <td style="width: 49.7929%; text-align: center; height: 29px;">3</td>
+        </tr>
+    </tbody>
+</table>
+<p>We take our moving weighted averages and input them into our table</p>
+<table style="border-collapse: collapse; width: 75%; height: 243px; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Data Table</caption>
+    <tbody>
+        <tr style="height: 40px;">
+            <th style="width: 33.2287%; height: 40px;" scope="col">Year</th>
+            <th style="width: 34.9535%; height: 40px;" scope="col">Box Office Sales (Thousands)</th>
+            <th style="width: 31.8464%; height: 40px;" scope="col">WMA</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2020</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">3</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2021</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">5</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2022</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">3</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">-</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2023</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">2</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">3</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2024</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">4</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">3.3</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2025</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">9</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">5.5</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.2287%; text-align: center; height: 29px;">2026</td>
+            <td style="width: 34.9535%; text-align: center; height: 29px;">3</td>
+            <td style="width: 31.8464%; text-align: center; height: 29px;">4.9</td>
+        </tr>
+    </tbody>
+</table>
+<p>If we plot our Sales and our weighted moving averages we see the data smoothing in action.</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://utsa.instructure.com/courses/86233/files/16031533/preview" alt="A graph of the above table" width="75%" height="75%" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/files/16031533" data-api-returntype="File" /></p>
+<p>&nbsp;</p>

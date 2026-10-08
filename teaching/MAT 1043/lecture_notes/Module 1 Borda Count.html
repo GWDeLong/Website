@@ -1,0 +1,135 @@
+<h2>Module 1: Borda Count</h2>
+<hr />
+<h3 style="text-align: center;">Introduction</h3>
+<p>Previously we talked about the Instant Runoff method of polling, we now focus on a point-based method called the Borda Count.&nbsp;</p>
+<blockquote><span>The Borda count has been independently reinvented several times, with the first recorded proposal in 1435 being by&nbsp;</span>Nicholas of Cusa<span>,</span><sup id="cite_ref-Emerson_2016_1-0" class="mw-ref reference" data-mw="{&quot;name&quot;:&quot;ref&quot;,&quot;attrs&quot;:{&quot;name&quot;:&quot;Emerson_2016&quot;},&quot;body&quot;:{&quot;id&quot;:&quot;mw-reference-text-cite_note-Emerson_2016-1&quot;}}"></sup><sup id="cite_ref-:2_2-0" class="mw-ref reference" data-mw="{&quot;name&quot;:&quot;ref&quot;,&quot;attrs&quot;:{&quot;name&quot;:&quot;:2&quot;},&quot;body&quot;:{&quot;id&quot;:&quot;mw-reference-text-cite_note-:2-2&quot;}}"></sup><span>&nbsp;but is named after the 18th-century French mathematician and naval engineer&nbsp;</span>Jean-Charles de Borda<span>, who re-devised the system in 1770.</span></blockquote>
+<p style="text-align: right;">- <a class="inline_disabled" href="https://en.wikipedia.org/wiki/Borda_count" target="_blank" rel="noopener">Wikipedia, Borda Count</a></p>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lecture</h3>
+<ul>
+    <li style="text-align: left;">Weights</li>
+    <li style="text-align: left;">Borda Count Method</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p>The Simple Majority (most votes wins) and Instant Runoff methods both deal with majority rulings, we wish to find a method which is purely numerical, more efficient, and easy for a computer to handle, that being the Borda Count.&nbsp;</p>
+<hr />
+<h3 style="text-align: center;">Weights</h3>
+<p>Similarly to the Instant Runoff method, we must introduce a mechanism to count the votes, for the Borda Count we use weights.</p>
+<h4><span style="text-decoration: underline;">Definition (Weights).</span></h4>
+<blockquote>A <em>weight</em> is a percentage of importance which is multiplied to a value to scale it.</blockquote>
+<p>We work with weights often, the most relevant weighted schemes are class grades. As an example let's take a look at a grade distribution and some student scores.</p>
+<p>As an example</p>
+<table style="border-collapse: collapse; width: 50%; margin-left: auto; margin-right: auto; height: 87px;" border="1">
+    <caption>Sample Report Card</caption>
+    <tbody>
+        <tr style="height: 29px;">
+            <th style="width: 33.3044%; height: 29px;" scope="col">Assignment</th>
+            <th style="width: 33.3044%; height: 29px;" scope="col">Student Score</th>
+            <th style="width: 33.3057%; height: 29px;" scope="col">Percent of Final Grade</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3044%; height: 29px;">Homework</td>
+            <td style="width: 33.3044%; height: 29px;">85</td>
+            <td style="width: 33.3057%; height: 29px;">10%</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3044%; height: 29px;">Exams</td>
+            <td style="width: 33.3044%; height: 29px;">93</td>
+            <td style="width: 33.3057%; height: 29px;">90%</td>
+        </tr>
+    </tbody>
+</table>
+<p>Despite how awful this grading scheme is, we can still find the final grade. To do so, we take the weight, Percent of Final Grade, and multiply by the associated value, Student Score. Doing so, we find</p>
+<p>\[ \text{Final Grade } = \underbrace{0.10}_{\text{Homework Weight}} \overbrace{(85)}^{\text{Student Score}}+ \underbrace{0.9}_{\text{Exam Weight}} \overbrace{(93)}^{\text{Student Score}}= 92.2 \]</p>
+<p>The student passes the class with a grade of 92.2.</p>
+<hr />
+<h3 style="text-align: center;">Borda Count Method</h3>
+<p>We now have the tools to introduce the Borda Count.</p>
+<h4><span style="text-decoration: underline;">Definition (Borda Count).</span></h4>
+<blockquote>
+    <p>Given \( n \) choices, we assign weights based on preference. First choices have a weight of \( n \), second choices have a weight of \( n - 1 \), and so on until the last choice receiving a weight of 1. The final scores are summed, the winner is the choice with the highest score.</p>
+</blockquote>
+<p>Implementing the method with sample preference schedules we have the following.</p>
+<table style="border-collapse: collapse; width: 50.0428%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Preference Schedules</caption>
+    <tbody>
+        <tr style="height: 29px;">
+            <th style="width: 25.0214%; height: 29px;" scope="col">Rank</th>
+            <th style="width: 25.0214%; height: 29px;" scope="col">2 votes</th>
+            <th style="width: 25.0214%; height: 29px;" scope="col">3 votes</th>
+            <th style="width: 25.0214%; height: 29px;" scope="col">2 votes</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; height: 29px; text-align: right;">1</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">A</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">B</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">C</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; height: 29px; text-align: right;">2</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">B</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">C</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">A</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; height: 29px; text-align: right;">3</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">C</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">A</td>
+            <td style="width: 25.0214%; height: 29px; text-align: center;">B</td>
+        </tr>
+    </tbody>
+</table>
+<p>We compute the scores as follows</p>
+<p>\[ \text{Total Score } = 3 (\text{\# of 1st place votes}) + 2 (\text{\# of 2nd place votes}) + 1 (\text{\# of 3rd place votes}) \]</p>
+<p>Finding the scores for \( A \), \( B \), and \( C \)</p>
+<p>\begin{align*}<br />A &amp;= 3(2) + 2(2) + 1(3) = 13 \text{ points}\\<br />B &amp;= 3(3) + 2(2) + 1(2) = 15 \text{ points}\\<br />C &amp;= 3(2) + 2(3) + 1(2) = 14 \text{ points}<br />\end{align*}</p>
+<p>Choice \( B \) has the highest score, hence \( B \) wins!</p>
+<h4><span style="text-decoration: underline;">Note.</span></h4>
+<blockquote>
+    <p>Other weights may be used to compute the end score such as 2, 1, and 0. As long as the weights are decreasing, the winner will not change.</p>
+</blockquote>
+<p>A more complicated example follows</p>
+<table style="border-collapse: collapse; width: 50.0428%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Preference Schedules</caption>
+    <tbody>
+        <tr style="height: 29px;">
+            <th style="width: 25%; height: 29px;" scope="col">Rank</th>
+            <th style="width: 25%; height: 29px;" scope="col">5 votes</th>
+            <th style="width: 25%; height: 29px;" scope="col">7 votes</th>
+            <th style="width: 25%; height: 29px;" scope="col">2 votes</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25%; height: 29px; text-align: right;">1</td>
+            <td style="width: 25%; height: 29px; text-align: center;">A</td>
+            <td style="width: 25%; height: 29px; text-align: center;">C</td>
+            <td style="width: 25%; height: 29px; text-align: center;">D</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25%; height: 29px; text-align: right;">2</td>
+            <td style="width: 25%; height: 29px; text-align: center;">C</td>
+            <td style="width: 25%; height: 29px; text-align: center;">B</td>
+            <td style="width: 25%; height: 29px; text-align: center;">A</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25%; height: 29px; text-align: right;">3</td>
+            <td style="width: 25%; height: 29px; text-align: center;">B</td>
+            <td style="width: 25%; height: 29px; text-align: center;">D</td>
+            <td style="width: 25%; height: 29px; text-align: center;">B</td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align: right;">4</td>
+            <td style="width: 25%; text-align: center;">D</td>
+            <td style="width: 25%; text-align: center;">A</td>
+            <td style="width: 25%; text-align: center;">C</td>
+        </tr>
+    </tbody>
+</table>
+<p>The computations of the final scores are</p>
+<p>\begin{align*}<br />A &amp;= 4(5) + 3(2) + 2(0) + 1(7) &amp;&amp;= 33 \text{ points}\\<br />B &amp;= 4(0) + 3(7) + 2(5 + 2) + 1(0) &amp;&amp;= 35 \text{ points}\\<br />C &amp;= 4(7) + 3(5) + 2(0) + 1(2) &amp;&amp;= 45 \text{ points}\\<br />D &amp;= 4(2) + 3(0) + 2(7) + 1(5) &amp;&amp;= 27 \text{ points}<br />\end{align*}</p>
+<p>We observe that \( C \) has the most points, therefore \( C \) wins.</p>
+<h4><span style="text-decoration: underline;">Note.</span></h4>
+<blockquote>
+    <p>Instant Runoff and Borda Count may not have the same winner.</p>
+</blockquote>
+<p>Thus ends Module 1.</p>

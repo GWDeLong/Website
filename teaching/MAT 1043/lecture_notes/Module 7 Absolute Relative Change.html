@@ -1,0 +1,69 @@
+<p>Module 7: Absolute Relative Change</p>
+<hr />
+<p>Topics Covered in this Lecture</p>
+<ul>
+    <li>Absolute Change</li>
+    <li>Relative Change</li>
+</ul>
+<hr />
+<p>Motivation</p>
+<p>We want to understand how things change with time, we have started working with this concept with the weighted moving average, but now we consider a more direct mean of understanding change.</p>
+<hr />
+<p>Absolute Change</p>
+<p>Our most direct way to measure change is by simply finding the difference.</p>
+<p>Definition (Absolute Change).</p>
+<p>The difference measuring how much something has changed, calculated \( \text{End } - \text{ Start} \).</p>
+<p>When taking finding the change \( B\text{-value} - A\text{-value} \), we will say 'The absolute change in \( X \) from \( A \) to \( B \), where \( X \) is some context of the data.</p>
+<p>As an example, suppose we want to find the absolute change in housing prices in San Antonio from year to year. Below is our data</p>
+<table style="border-collapse: collapse; width: 75%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Maximum Median House Price by Year</caption>
+    <tbody>
+        <tr>
+            <th style="width: 24.9731%;" scope="col"></th>
+            <th style="width: 24.9731%;" scope="col">2022</th>
+            <th style="width: 24.9731%;" scope="col">2023</th>
+            <th style="width: 24.9731%;" scope="col">2024</th>
+        </tr>
+        <tr>
+            <th style="width: 24.9731%;" scope="row">San Antonio</th>
+            <td style="width: 24.9731%; text-align: center;">$382,400</td>
+            <td style="width: 24.9731%; text-align: center;">$367,325</td>
+            <td style="width: 24.9731%; text-align: center;">$349,000</td>
+        </tr>
+    </tbody>
+</table>
+<p>If we wanted to find <em>the absolute change in San Antonio from 2022 to 2024</em>, we would take</p>
+<p>\[ $349,000 - $382,400 = -$33,400. \]</p>
+<p>We would expect this to be a negative value since the prices have decreased.</p>
+<p>If we wanted to find the absolute change in San Antonio from 2023 to 2022, we would take</p>
+<p>\[ $382,400 - $367,325 = $15,075. \]</p>
+<hr />
+<p>Relative Change</p>
+<p>Sometimes we wish to know how much something has changed in proportion to another thing to do so we find the relative change.</p>
+<p>Definition (Relative Change).</p>
+<p>Also known as the percent change, a measure of increase or decrease as a percent, computed as the absolute change over the starting value, i.e.,</p>
+<p>\[ \frac{\text{End } - \text{ Start}}{\text{Start}}. \]</p>
+<p>Returning to our previous example</p>
+<table style="border-collapse: collapse; width: 75%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Maximum Median House Price by Year</caption>
+    <tbody>
+        <tr>
+            <th style="width: 24.9731%;" scope="col"></th>
+            <th style="width: 24.9731%;" scope="col">2022</th>
+            <th style="width: 24.9731%;" scope="col">2023</th>
+            <th style="width: 24.9731%;" scope="col">2024</th>
+        </tr>
+        <tr>
+            <th style="width: 24.9731%;" scope="row">San Antonio</th>
+            <td style="width: 24.9731%; text-align: center;">$382,400</td>
+            <td style="width: 24.9731%; text-align: center;">$367,325</td>
+            <td style="width: 24.9731%; text-align: center;">$349,000</td>
+        </tr>
+    </tbody>
+</table>
+<p>If we wanted to find <em>the relative change in San Antonio from 2022 to 2024</em>, we would take</p>
+<p>\[\frac{349,000 - 382,400}{382,400} \approx -0.0873 \quad \text{or } -8.73\% \]</p>
+<p>read as a 8.75% decrease.</p>
+<p>If we wanted to find the relative change in San Antonio from 2023 to 2022, we would take</p>
+<p>\[\frac{382,400 - 367,325}{367,325} \approx 0.0410 \quad \text{or } 4.10\% \]</p>
+<p>a 4.10 % increase.</p>

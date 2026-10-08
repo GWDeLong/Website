@@ -1,0 +1,87 @@
+<h2>Module 4: Independent Probabilities</h2>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lecture</h3>
+<ul>
+    <li>Probability</li>
+    <li>Independence</li>
+    <li>AND Probabilities</li>
+    <li>Review: Fraction Addition</li>
+    <li>Or Probabilities</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p>Previously we worked with data sets, we now want to know the chance of something happening.</p>
+<hr />
+<h3 style="text-align: center;">Probability</h3>
+<p>We begin with a definition</p>
+<h4><span style="text-decoration: underline;">Definition (Probability).</span></h4>
+<blockquote>
+    <p>The likelihood of an event occurring.</p>
+</blockquote>
+<h4><span style="text-decoration: underline;">Notation.</span></h4>
+<blockquote>
+    <p>The probability of event \(A\) occurring is denoted as \( P(A)\), a number between 0 (0%) and 1 (100%).</p>
+</blockquote>
+<p>We compute the probability of a single event happening as</p>
+<p>\[ \text{Probability} = \frac{\text{Successful Outcomes}}{\text{All Possible Outcomes}}, \]</p>
+<h4><span style="text-decoration: underline;">Example</span>.</h4>
+<p><strong>What is the probability of rolling a 2 on a six-sided dice?</strong></p>
+<p>The possible outcomes are</p>
+<p>\[ 1 \quad \underline{2} \quad 3 \quad 4 \quad 5 \quad 6 \]</p>
+<p>noting that 2 only occurs once and there are 6 possibilities we find</p>
+<p>\[ P(2) = \frac{1}{6}. \]</p>
+<p>We now consider how to deal with multiple events occurring at once. We look at the connectives AND and OR, where AND carries the requirement that <em>both </em>events happen and OR carries that <em>either</em> event would happen.</p>
+<hr />
+<h3 style="text-align: center;">Independence</h3>
+<p>For now, we consider the independent case.</p>
+<h4><span style="text-decoration: underline;">Definition (Independent Probability).</span></h4>
+<blockquote>
+    <p>Two events are called <em>independent</em>&nbsp;if one outcome has no influence on the other outcome.</p>
+</blockquote>
+<p>As example, if we flip a coin and roll a dice, or rolling two dice. Either of which are two events happening with no interference from each other.</p>
+<hr />
+<h3 style="text-align: center;">Independent AND</h3>
+<p>We compute the probability of two independent events \( A\) and \( B \) both occurring as the product of their probabilities, i.e.,</p>
+<p>\[P(A \text{ AND } B) = P(A) \cdot P(B). \]</p>
+<p>Below are some examples of computing AND probabilities.</p>
+<p>Example.</p>
+<p><strong>What is the probability of rolling a two (2) on a six-sided dice AND a heads (H) on a fair coin?</strong></p>
+<p>As before, we can list every possible outcome, and select the successful ones</p>
+<p>\[ \begin{matrix} 1H&nbsp; &amp; \underline{2H}&nbsp; &amp; 3H&nbsp; &amp; 4H&nbsp; &amp; 5H&nbsp; &amp; 6H \\ 1T&nbsp; &amp; 2T&nbsp; &amp; 3T&nbsp; &amp; 4T&nbsp; &amp; 5T&nbsp; &amp; 6T&nbsp; &nbsp;\end{matrix} \]&nbsp;</p>
+<p>one success over twelve possibilities yields \( P(2 \text{ AND } H) = 1/12 \).</p>
+<p>Our brute force method is limited by the possibilities, so instead we use our previous formula \( P(A \text{ AND } B) = P(A)\cdot P(B) \), therefore</p>
+<p>\begin{align*}<br />P(2 \text{ AND H}) &amp;= P(2) \cdot P(H) \\<br />&amp;= \frac{1}{6} \cdot \frac{1}{2} = \frac{1}{12}.<br />\end{align*}</p>
+<p>Thus there is a one in twelve chance of rolling a two and flipping a heads.</p>
+<h4><span style="text-decoration: underline;">Example.</span></h4>
+<p><strong>What is the probability of rolling an even number (EVEN) on a six-sided die and a tails (T) on a fair coin?</strong></p>
+<p>Listing outcomes and finding successful ones&nbsp;</p>
+<p>\[ \begin{matrix} 1H&nbsp; &amp; 2H&nbsp; &amp; 3H&nbsp; &amp; 4H&nbsp; &amp; 5H&nbsp; &amp; 6H \\ 1T&nbsp; &amp; \underline{2T}&nbsp; &amp; 3T&nbsp; &amp; \underline{4T}&nbsp; &amp; 5T&nbsp; &amp; \underline{6T}&nbsp; &nbsp;\end{matrix} \]&nbsp;</p>
+<p>Therefore</p>
+<p>\[ P( \text{EVEN AND T}) = \frac{3}{12} = \frac{\cancel{3} \cdot 1}{\cancel{3} \cdot 4} = \frac{1}{4}.\]</p>
+<p>Instead, using our formula</p>
+<p>\begin{align*}<br />P( \text{EVEN AND T}) &amp;= P(\text{EVEN}) \cdot P(\text{T}) \\<br />&amp;= \frac{3}{6} \cdot \frac{1}{2} = \frac{3}{12} = \frac{1}{4}.<br />\end{align*}</p>
+<p>Before we continue to the OR statement, we need to review how to add fractions.</p>
+<hr />
+<h3 style="text-align: center;">Review: Fraction Addition</h3>
+<p>&nbsp;Let \(a, b, c\), and \(d\) be numbers, then we add the following factions as such.</p>
+<p>\begin{align*}<br />\frac{a}{b} + \frac{c}{d} &amp;= \frac{d}{d} \cdot \frac{a}{b} + \frac{c}{d}\cdot \frac{b}{b} \tag{Finding a common denominator of \( bd \)}\\<br />&amp;= \frac{ad}{bd} + \frac{bc}{bd} \tag{Simplifying} \\<br />&amp;= \frac{ad + bc}{bd} \tag{adding the numerators}<br />\end{align*}</p>
+<p>To lessen the reliance of variables we work on a more concrete example of adding 4 and 1/3, the addition follows</p>
+<p>\begin{align*}<br />\frac{4}{1} + \frac{1}{3} &amp;= \frac{3}{3} \cdot \frac{4}{1} + \frac{1}{3} \cdot \frac{1}{1} \\<br />&amp;=&nbsp; \frac{12}{3} + \frac{1}{3} \\<br />&amp;= \frac{13}{3}.<br />\end{align*} &nbsp;</p>
+<hr />
+<h3 style="text-align: center;">Independent OR</h3>
+<p>We compute the probability of two independent events \( A\) or \( B \) occurring as the sum of their probabilities subtracted by the probability of them both occuring, i.e.,</p>
+<p>\[P(A \text{ OR } B) = P(A) + P(B) - P( A \text{ AND } B). \]</p>
+<p>The subtraction isn't an obvious part of the formula. In Probability, we consider what's called "probability spaces" or universes in which \( A \) or \( B \) can happen, visualized below</p>
+<p style="text-align: center;"><img src="https://utsa.instructure.com/courses/86233/files/15755791/preview" alt="A Venn diagram labelled A and B" width="50%" height="50%" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/files/15755791" data-api-returntype="File" /></p>
+<p style="text-align: left;">We note that if we consider \( A + B \), we would be count the intersection twice, hence the need to subtract.</p>
+<p style="text-align: left;">Now turning to our examples.</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Example.</span></h4>
+<p style="text-align: left;"><strong>&nbsp;What is the probability of rolling an even number (EVEN) on a six-sided die or a tails (T) on a fair coin?</strong></p>
+<p style="text-align: left;">Applying our formula</p>
+<p style="text-align: left;">\begin{align*}<br />P(\text{EVEN OR T}) &amp;= P(\text{EVEN}) + P(\text{T}) - P(\text{EVEN AND T}) \\<br />&amp;= \frac{3}{6} + \frac{1}{2} - \frac{3}{6}\cdot\frac{1}{2} \\<br />&amp;= \frac{2}{2}\cdot\frac{3}{6} + \frac{1}{2}\cdot\frac{6}{6} - \frac{3}{12} \\<br />&amp;= \frac{6}{12} + \frac{6}{12} - \frac{3}{12} \\<br />&amp;= \frac{6 + 6 - 3}{12} = \frac{9}{12} = \frac{3}{4}.<br />\end{align*}</p>
+<p style="text-align: left;">therefore there is a three out of four chance to roll a even number or flip a tails.</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Example.</span></h4>
+<p style="text-align: left;"><strong>&nbsp;What is the probability of rolling a two (2) on a six-sided dice or a heads (H) on a fair coin?</strong></p>
+<p style="text-align: left;">Our answer</p>
+<p style="text-align: left;">\begin{align*}<br />P(\text{2 OR H}) &amp;= P(\text{2}) + P(\text{H}) - P(\text{2 AND H}) \\<br />&amp;= \frac{1}{6} + \frac{1}{2} - \frac{1}{6}\cdot\frac{1}{2} \\<br />&amp;= \frac{2}{2}\cdot\frac{1}{6} + \frac{1}{2}\cdot\frac{6}{6} - \frac{1}{12} \\<br />&amp;= \frac{2}{12} + \frac{6}{12} - \frac{1}{12} \\<br />&amp;= \frac{2 + 6 - 1}{12} = \frac{7}{12}.<br />\end{align*}</p>
+<p style="text-align: left;">So there is a seven in twelve chance of rolling a 2 or flipping a heads.</p>

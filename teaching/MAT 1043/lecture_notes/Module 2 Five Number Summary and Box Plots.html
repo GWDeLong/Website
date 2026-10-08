@@ -1,0 +1,86 @@
+<h2>Module 2: Five Number Summary and Box Plots</h2>
+<h3 style="text-align: center;">Introduction</h3>
+<p>Now that we have some tools to understand data, we want to build some infrastructure that will make data presentation much neater.</p>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lecture</h3>
+<ul>
+    <li>Quartiles</li>
+    <li>Five Number Summary</li>
+    <li>Box Plots</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p>Data presentation can be very difficult, we aim for models (graphs, plots, etc) which are easily readable and contain as much information as possible.</p>
+<hr />
+<h3 style="text-align: center;">Quartiles</h3>
+<p>We begin with a definition</p>
+<h4><span style="text-decoration: underline;">Definition (Quartile).</span></h4>
+<blockquote>
+    <p>A quartile is a quarter, or 25%, of a data set.</p>
+</blockquote>
+<h4><span style="text-decoration: underline;">Notation.</span></h4>
+<p>For the "break" points of the four quartiles, we denote them as follows.</p>
+<p>\[Q_0 \;\overset{ \text{First Quartile}}{\rule{60pt}{2pt}}\; Q_1 \;\overset{ \text{Second Quartile}}{\rule{60pt}{2pt}}\; Q_2 \;\overset{ \text{Third Quartile}}{\rule{60pt}{2pt}}\; Q_3 \;\overset{ \text{Fourth Quartile}}{\rule{60pt}{2pt}}\; &nbsp;Q_4 \]</p>
+<h4><span style="text-decoration: underline;">Note.</span></h4>
+<p>The location of these break points depend on the distribution of data, below is an example of a non-even distribution.</p>
+<p>\[Q_0 \;\rule{20pt}{2pt}\; Q_1 \;\rule{140pt}{2pt}\; Q_2 \;\rule{70pt}{2pt}\; Q_3 \;\rule{10pt}{2pt}\; &nbsp;Q_4 \]</p>
+<p>With a little intuition we realize that \( Q_0 \) and \( Q_4 \) are the minimum and maximum, respectively, of the data set and since \( Q_2 \) marks the center of the data it must be the median value. The other labels \( Q_1 \) and \( Q_3 \) are a little more elusive.</p>
+<h4><span style="text-decoration: underline;">Observation (\( Q_1 \) and \( Q_3 \)).</span></h4>
+<p>We compute \( Q_1 \) and \( Q_3 \) as the medians of the first and last halves -- excluding the median -- of the data set.</p>
+<p>As an example, take the following data set.</p>
+<p>\[ D = \{ 2, 7, 23, 15, 17, 15, 19, 21, 8, 16, 15 \} \]</p>
+<p>We first find the ordered data set \( \bar{D} \), this is read "\( D \) bar."</p>
+<p>\[ \bar{D} = \{ 2, 7, 8, 15, 15, 15, 16, 17, 19, 21, 23 \} \]</p>
+<p>Now we find the Median by eliminating outer terms</p>
+<p>\[\cancel{2}, \cancel{7}, \cancel{8}, \cancel{15}, \cancel{15}, 15, \cancel{16}, \cancel{17}, \cancel{19}, \cancel{21}, \cancel{23}\]</p>
+<p>Hence the median is 15. Now we look at the first half of the data, ignoring the median.</p>
+<p>\[ 2, 7, 8, 15, 15 \]</p>
+<p>The median of this smaller set is 8. Doing so again for the second half.</p>
+<p>\[ 16, 17, 19, 21, 23 \]</p>
+<p>We find a median of 19.</p>
+<p>Putting our work together, we have found</p>
+<p>\[ Q_1 = 8, \quad \text{Median} = 15, \quad Q_3 = 19\]</p>
+<p>But what happens when we are given a data set of even length?</p>
+<p>Consider another data set</p>
+<p>\[ D = \{ 1, 2, 3, 4, 5, 6, 7, 8 \} \]</p>
+<p>Finding the median we take the average of the two middle terms found as&nbsp;</p>
+<p>\[ \cancel{1}, \cancel{2}, \cancel{3}, 4, 5, \cancel{6}, \cancel{7}, \cancel{8} \]</p>
+<p>Now averaging 4 and 5, we have</p>
+<p>\[ \text{Median } = \frac{4 + 5}{2} = \frac{9}{2} = 4.5 \]</p>
+<p>Therefore our median is 4.5. Looking at the first and last halves of the data, still not including our median,</p>
+<p>\[1,2,3,4 \quad \text{and} \quad 5,6,7,8 \]</p>
+<p>We find medians of 2.5 and 6.5, so&nbsp;</p>
+<p>\[ Q_1 = 2.5, \quad \text{Median} = 4.5, \quad Q_3 = 6.5 \]</p>
+<hr />
+<h3 style="text-align: center;">Five Number Summary</h3>
+<p>Now that we have many different types of measurements of a data set, we want to be able to isolate the most important in a nice format.</p>
+<h4><span style="text-decoration: underline;">Definition (Five Number Summary).</span></h4>
+<blockquote>
+    <p>The five number summary is a list of the median, \( Q_1 \), \( Q_3 \), the minimum (denoted \( \text{Min} = \cdot \)), and the maximum (denoted \( \text{Max} = \cdot \)) of a given data set.</p>
+</blockquote>
+<p>For the purposes of these notes we will organize the list as follows, but any presentation is valid.</p>
+<p>\[\text{Min} = \underline{\hspace{24pt}} \quad \text{Median} = \underline{\hspace{24pt}} \quad \text{Max} = \underline{\hspace{24pt}} \]</p>
+<p>\[Q_1 = \underline{\hspace{24pt}} \quad Q_3 = \underline{\hspace{24pt}} \]</p>
+<hr />
+<h3 style="text-align: center;">Box Plots</h3>
+<p>We now present a method of visualizing the five number summary.</p>
+<h4><span style="text-decoration: underline;">Definition (Box Plot).</span></h4>
+<blockquote>
+    <p>A box plot, also called a box and whisker plot, is a visual representation of the give number summary constructed as follows.</p>
+</blockquote>
+<p style="text-align: center;"><img src="https://utsa.instructure.com/courses/86233/files/15580282/preview" alt="A sample box plot, labelled" width="50%" height="50%" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/files/15580282" data-api-returntype="File" /></p>
+<p style="text-align: left;">We now take a look at our previous example&nbsp;</p>
+<p style="text-align: left;">\[ D = \{ 1, 2, 3, 4, 5, 6, 7, 8 \]</p>
+<p style="text-align: left;">Our five number summary is</p>
+<p style="text-align: left;">\[ \text{Min} = 1 \quad \text{Median} = 4.5 \quad \text{Max} = 8 \]</p>
+<p style="text-align: left;">\[ Q_1 = 2.5 \quad Q_3 = 6.5 \]</p>
+<p style="text-align: left;">and drawing our box plot</p>
+<p style="text-align: center;"><img src="https://utsa.instructure.com/courses/86233/files/15583724/preview" alt="The box plot for the above data" width="50%" height="50%" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/files/15583724" data-api-returntype="File" /></p>
+<p style="text-align: left;">We do the same for the other example with data</p>
+<p style="text-align: left;">\[ \bar{D} = \{ 2, 7, 8, 15, 15, 15, 16, 17, 19, 21, 23 \} \]</p>
+<p style="text-align: left;">Our five number summary is</p>
+<p style="text-align: left;">\[ \text{Min} = 2 \quad \text{Median} = 15 \quad \text{Max} = 23 \]</p>
+<p style="text-align: left;">\[ Q_1 = 8 \quad Q_3 = 19 \]</p>
+<p style="text-align: left;">and drawing our box plot</p>
+<p style="text-align: center;"><img src="https://utsa.instructure.com/courses/86233/files/15584612/preview" alt="Box plot of above data" width="50%" height="50%" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/files/15584612" data-api-returntype="File" /></p>
+<p style="text-align: left;">Thus ends module 2.</p>

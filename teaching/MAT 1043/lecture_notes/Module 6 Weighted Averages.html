@@ -1,0 +1,140 @@
+<h2>Module 6: Weighted Averages</h2>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lecture</h3>
+<ul>
+    <li>Revisiting Averages and Weights</li>
+    <li>Weighted Averages</li>
+    <li>Examples</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p>When computing averages in the past, we made the assumption that every data point had the exact same worth, or contribution, to the pool. Many things in life are not as such, instead we need a way to find an average while showing respect to differing levels of importance.</p>
+<hr />
+<h3 style="text-align: center;">Revisiting Averages and Weights</h3>
+<p>In <a title="Module 2 Mean Median Mode And Dot Plots Accessible" href="https://utsa.instructure.com/courses/86233/pages/module-2-mean-median-mode-and-dot-plots-accessible" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/pages/module-2-mean-median-mode-and-dot-plots-accessible" data-api-returntype="Page">Module 2</a>, we defined the average as the sum of all data values divided by the total number of data points, or simply</p>
+<p>\[ \text{Average} = \frac{\text{Sum of Values}}{\# \text{ of Values}}. \]</p>
+<p>We also defined in <a title="Module 1 Borda Count Accessible" href="https://utsa.instructure.com/courses/86233/pages/module-1-borda-count-accessible" data-course-type="wikiPages" data-published="true" data-api-endpoint="https://utsa.instructure.com/api/v1/courses/86233/pages/module-1-borda-count-accessible" data-api-returntype="Page">Module 1</a> the idea of a weight, the percentage of importance which is multiplied to a value to scale it.</p>
+<hr />
+<h3 style="text-align: center;">Weighted Averages</h3>
+<p>We now combine the average and weights.</p>
+<h4><span style="text-decoration: underline;">Definition (Weighed Average).</span></h4>
+<blockquote>
+    <p>An average where each data point is scaled by its importance taken over the sum of the weights.</p>
+</blockquote>
+<p>Our process of computing a weighted average is as follows.</p>
+<ol style="list-style-type: decimal;">
+    <li>Scale each data point by its weight</li>
+    <li>Find the sum of the scaled data</li>
+    <li>Find the sum of the weights</li>
+    <li>Divide the sum of the scaled data by the sum of the weights</li>
+</ol>
+<hr />
+<h3 style="text-align: center;">Examples</h3>
+<p>Below are some examples of computing weighted averages with a brief aside about UT San Antonio's GPA system,</p>
+<h4><span style="text-decoration: underline;">Example 1.</span></h4>
+<p>Suppose we are taking ART 1012 - Introduction to Handbuilding and we finish the class with the following scores with their respective part of the final grade.</p>
+<table style="border-collapse: collapse; width: 75%; height: 116px; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Course Results</caption>
+    <tbody>
+        <tr style="height: 29px;">
+            <th style="width: 33.3044%; height: 29px; text-align: center;" scope="col">Category</th>
+            <th style="width: 33.3044%; height: 29px; text-align: center;" scope="col">Score</th>
+            <th style="width: 33.3057%; height: 29px; text-align: center;" scope="col">Part of Grade</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3044%; height: 29px; text-align: right;">Homework</td>
+            <td style="width: 33.3044%; height: 29px; text-align: center;">80</td>
+            <td style="width: 33.3057%; height: 29px; text-align: center;">40%</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3044%; height: 29px; text-align: right;">Projects</td>
+            <td style="width: 33.3044%; height: 29px; text-align: center;">100</td>
+            <td style="width: 33.3057%; height: 29px; text-align: center;">35%</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 33.3044%; height: 29px; text-align: right;">Exams</td>
+            <td style="width: 33.3044%; height: 29px; text-align: center;">90</td>
+            <td style="width: 33.3057%; height: 29px; text-align: center;">25%</td>
+        </tr>
+    </tbody>
+</table>
+<p>We want to compute our final grade as a weighted average,</p>
+<p><strong>First, we will scale each score by its part of the grade.</strong></p>
+<p>For Homework</p>
+<p>\[ 80 (0.40) = 32\]</p>
+<p>For Projects</p>
+<p>\[100 (0.35) = 35 \]</p>
+<p>For Exams</p>
+<p>\[90(0.25) = 22.5 \]</p>
+<p><strong>Second, we will find the sum of the above weighted scores</strong></p>
+<p>\[ 32 + 35 + 22.5 = 89.5\]</p>
+<p><strong>Third, we find the sum of the weights</strong></p>
+<p>\[40 \% + 35 \% + 25 \% = 100 \% \quad (\text{or 1.00}) \]</p>
+<p><strong>Lastly, we divide our sum of scores (89.5) by the sum of our weights (1)</strong></p>
+<p>\[ \text{Weighted Average} = \frac{89.5}{1} = 89.5 \]</p>
+<p>Hence we would pass the class with a \( B^+ \).</p>
+<h4><span style="text-decoration: underline;">Aside (UT San Antonio's Course Numbering).</span></h4>
+<p>Reading UT San Antonio's course numbers is an important skill as a student, for our class MAT 1043, we dissect the course as follows.</p>
+<table style="border-collapse: collapse; width: 100%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>MAT 1043</caption>
+    <tbody>
+        <tr>
+            <th style="width: 24.9786%; text-align: center;" scope="col">MAT</th>
+            <th style="width: 24.9786%; text-align: center;" scope="col">1</th>
+            <th style="width: 24.9786%; text-align: center;" scope="col">04</th>
+            <th style="width: 24.9786%; text-align: center;" scope="col">3</th>
+        </tr>
+        <tr>
+            <td style="width: 24.9786%; text-align: center;">The Department (Math)</td>
+            <td style="width: 24.9786%; text-align: center;">
+                <p>The Level of Study (Freshman)</p>
+            </td>
+            <td style="width: 24.9786%; text-align: center;">Department Course Number</td>
+            <td style="width: 24.9786%; text-align: center;">Credit Hours</td>
+        </tr>
+    </tbody>
+</table>
+<p>We will use this information in our next example.</p>
+<h4><span style="text-decoration: underline;">Example (Calculating GPA).</span></h4>
+<p>Suppose we have just finished our first semester and want to calculate our GPA according to <a class="inline_disabled" href="https://onestop.utsa.edu/registration/student-records/grades/" target="_blank" rel="noopener">UT San Antonio's GPA Scheme</a>. Below are the results of our first semester,</p>
+<table style="border-collapse: collapse; width: 75%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Course Grades</caption>
+    <tbody>
+        <tr>
+            <th style="width: 33.3044%; text-align: center;" scope="col">Course</th>
+            <th style="width: 33.3044%; text-align: center;" scope="col">Letter Grade</th>
+            <th style="width: 33.3057%; text-align: center;" scope="col">GPA Scale</th>
+        </tr>
+        <tr>
+            <td style="width: 33.3044%; text-align: right;">MAT 1043</td>
+            <td style="width: 33.3044%; text-align: center;">\( A^+ \)</td>
+            <td style="width: 33.3057%; text-align: center;">4.0</td>
+        </tr>
+        <tr>
+            <td style="width: 33.3044%; text-align: right;">HIS 1044</td>
+            <td style="width: 33.3044%; text-align: center;">\( B \)</td>
+            <td style="width: 33.3057%; text-align: center;">3.0</td>
+        </tr>
+        <tr>
+            <td style="width: 33.3044%; text-align: right;">PSY 1063</td>
+            <td style="width: 33.3044%; text-align: center;">\( C\)</td>
+            <td style="width: 33.3057%; text-align: center;">2.0</td>
+        </tr>
+        <tr>
+            <td style="width: 33.3044%; text-align: right;">WRC 1022</td>
+            <td style="width: 33.3044%; text-align: center;">\( B^- \)</td>
+            <td style="width: 33.3057%; text-align: center;">2.67</td>
+        </tr>
+    </tbody>
+</table>
+<p>We follow our process for finding the weighted average, identifying our data values by the GPA scale and our weights by the credit hours.</p>
+<p><strong>Scaling our data</strong></p>
+<p style="text-align: center;">MAT 104<span style="background-color: #fbeeb8;"><strong>3</strong></span>: \( 4.0 (3) = 12 \)&nbsp;<br />HIS 104<span style="color: #000000; background-color: #fbeeb8;"><strong>4</strong></span>: \( 3.0 (4) = 12 \)&nbsp;<br />PSY 106<span style="background-color: #fbeeb8;"><strong>3</strong></span>: \( 2.0 (3) = 6 \)&nbsp;<br />WRC 102<span style="background-color: #fbeeb8;"><strong>2</strong></span>: \( 2.67 (2) = 5.34 \)&nbsp;</p>
+<p style="text-align: left;"><strong>Summing our weighted values</strong></p>
+<p style="text-align: left;">\[ 12 + 12 + 6 + 5.34 = 35.34\]</p>
+<p style="text-align: left;"><strong>Summing our weights (Credits)</strong></p>
+<p style="text-align: left;">\[ 3 + 4 + 3 + 2 = 12 \]</p>
+<p style="text-align: left;"><strong>Finding our weighted average</strong></p>
+<p style="text-align: left;">\[ \text{GPA} = \frac{35.34}{12} = 2..945. \]</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Note.</span></h4>
+<p style="text-align: left;">UT San Antonio rounds down to the second decimal point, hence our true GPA would be 2.94.</p>

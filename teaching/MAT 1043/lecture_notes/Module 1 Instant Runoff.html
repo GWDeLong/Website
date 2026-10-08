@@ -1,0 +1,162 @@
+<h2>Module 1: Instant Runoff</h2>
+<hr />
+<h3 style="text-align: center;">Introduction</h3>
+<p style="text-align: left;">Voting is one of the most important things you can do as a citizen, the earliest known records of voting come from pottery shards found in Athens, Greece. Many different forms of voting exist, but we set our sights on one method in particular today, the instant runoff method.</p>
+<hr />
+<h3 style="text-align: center;">Topics Covered in this Lecture</h3>
+<ul>
+    <li style="text-align: left;">Motivation</li>
+    <li style="text-align: left;">Absolute Majority</li>
+    <li style="text-align: left;">Ranked Choice Voting and Preference Schedules</li>
+    <li style="text-align: left;">Instant Runoff Method</li>
+</ul>
+<hr />
+<h3 style="text-align: center;">Motivation</h3>
+<p style="text-align: left;">When dealing with people, an authority needs to meet the needs of the people and it goes a long way to give people what they want, but how do we know what is the most preferred thing in a population? The mechanism that tells us is voting! Here's an example of what we mean.&nbsp;</p>
+<p style="text-align: left;">Suppose a population is asked to vote on two options, option \( A \) and option \( B \). After an election is held, option \( A \) gets 60% of the votes and option \( B \) gets the other 40%. Who wins? Well option \( A \) has the majority votes so \( A \) wins!</p>
+<p style="text-align: left;">But what happens when there are more options and two have similar favor?&nbsp;</p>
+<p style="text-align: left;">Given options \( A \), \( B \), and \( C \); resulting votes are 40%, 41%, and 19%, respectively (note that these percentages do add to 100%, we want input from everyone). Using our previous methodology, option \( B \) has the simple majority and therefore wins. But dear student, is this "fair"? Option \( A \) had only a percentage point difference, surely their votes should stand for something. We need a better way of counting votes and understanding voter choices.</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Note.</span>&nbsp;</h4>
+<blockquote>
+    <p style="text-align: left;"><a class="inline_disabled" href="https://en.wikipedia.org/wiki/Arrow's_impossibility_theorem" target="_blank" rel="noopener">Arrow's impossibility Theorem</a> states that no voting method can be truly "fair", i.e., meet all the criterion below.</p>
+</blockquote>
+<ol style="list-style-type: decimal;">
+    <li style="text-align: left;">
+        <blockquote>Every choice is listed and it is possible to cast a vote for each one equally.</blockquote>
+    </li>
+    <li style="text-align: left;">
+        <blockquote>All votes are truly equal, no vote has more sway than another</blockquote>
+    </li>
+    <li style="text-align: left;">
+        <blockquote>All votes are counted, no vote is cast away at any point.</blockquote>
+    </li>
+</ol>
+<p>This is a mathematical theorem, meaning that -- given these principles -- it is genuinely impossible to have such a voting system satisfying all three of the statements.</p>
+<hr />
+<p>Despite Arrow, we do out best to find a system that is as "fair" as possible. To do so, however, we require some structure.</p>
+<h4><span style="text-decoration: underline;">Definition (Absolute Majority).&nbsp;</span></h4>
+<blockquote>
+    <p>The&nbsp;<em>absolute majority</em> of votes is <strong>over </strong>50% of the votes cast.</p>
+</blockquote>
+<p>As an example, lets say that 18 votes are cast, we compute 50% of 18 or \( (0.5) \cdot 18 \) which is 9. This is not our absolute majority yet, we need over 9! We add one finding that the absolute majority of 18 votes is 10 votes.</p>
+<p>Another example, given 19 votes, we find that 50% of 19 or \( (0.5) \cdot 19 \) is 9.5. We round up, finding our absolute majority of 19 votes is 10 votes as well.&nbsp;</p>
+<h4><span style="text-decoration: underline;">Note (Computing Absolute Majority).</span></h4>
+<ul>
+    <li>
+        <blockquote>For an even number of votes, we add one to half of the votes cast.</blockquote>
+    </li>
+    <li>
+        <blockquote>For an odd number of votes, we round up to the nearest whole number.</blockquote>
+    </li>
+</ul>
+<hr />
+<p style="text-align: center;">Ranked Choice Voting and Preference Schedules</p>
+<p style="text-align: left;">In the voting structures that we are used to, we can only cast one vote. If our choice losses the election, we are out of luck. To remedy this, we wish to express our preferences over all the choices.&nbsp;</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Definition (Ranked Choice Voting).</span></h4>
+<blockquote>
+    <p style="text-align: left;">A voting methodology allowing voters to express ranked preference.</p>
+</blockquote>
+<p style="text-align: left;">Some places in the United States do use ranked choice voting in their elections, for more information about the history of ranked choice voting in the United States, you can follow <a class="inline_disabled" href="https://en.wikipedia.org/wiki/Ranked-choice_voting_in_the_United_States" target="_blank" rel="noopener">this link</a>.&nbsp;</p>
+<p style="text-align: left;">Back to our topic at hand, we now focus on how to record our preferences.</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Definition (Preference Schedule).</span></h4>
+<blockquote>
+    <p style="text-align: left;">A <em>preference schedule</em> is a table with rankings based on preference.</p>
+</blockquote>
+<p style="text-align: left;">Let's take a look at an example. Given the choices of KitKats, M&amp;M's, and Twix, a ranking is as follows.</p>
+<table style="border-collapse: collapse; width: 50%; margin-left: auto; margin-right: auto;" border="1">
+    <caption>A Sample Ranking of Candies</caption>
+    <tbody>
+        <tr>
+            <th style="width: 49.9572%;" scope="col">Ranking</th>
+            <th style="width: 49.9572%;" scope="col">Candy</th>
+        </tr>
+        <tr>
+            <td style="width: 49.9572%; text-align: center;">1</td>
+            <td style="width: 49.9572%; text-align: center;">KitKats</td>
+        </tr>
+        <tr>
+            <td style="width: 49.9572%; text-align: center;">2</td>
+            <td style="width: 49.9572%; text-align: center;">Twix</td>
+        </tr>
+        <tr>
+            <td style="width: 49.9572%; text-align: center;">3</td>
+            <td style="width: 49.9572%; text-align: center;">M&amp;M's</td>
+        </tr>
+    </tbody>
+</table>
+<p>By convention, the first choice is the most preferred and the last choice is the least preferred.</p>
+<hr />
+<h3 style="text-align: center;">Instant Runoff Method</h3>
+<p style="text-align: left;">We now properly define the instant runoff method.</p>
+<h4 style="text-align: left;"><span style="text-decoration: underline;">Definition (Instant Runoff).</span></h4>
+<blockquote>
+    <p style="text-align: left;">The <em>instant runoff</em> method is preformed by the following. Given a collection of preference schedules, we group the schedules by duplicates, then check among the the first choices for an absolute majority. If no such majority exists, we preform a runoff by eliminating the first choice with the fewest votes, then allocate those votes to the next preferred choice within those preference schedules.</p>
+</blockquote>
+<p style="text-align: left;">To make this definition more concrete, let's look at another example.</p>
+<p style="text-align: left;">Suppose we have three options again, options \( A \), \( B \), and \( C\). The group preference schedules are recorded in the table below.</p>
+<table style="border-collapse: collapse; width: 50.0428%; height: 116px; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Recorded Preference Schedules</caption>
+    <tbody>
+        <tr style="height: 29px;">
+            <th style="width: 25.0214%; height: 29px;" scope="col">Rank</th>
+            <th style="width: 25.0214%; text-align: center; height: 29px;" scope="col">4 votes</th>
+            <th style="width: 25.0214%; text-align: center; height: 29px;" scope="col">3 votes</th>
+            <th style="width: 25.0214%; text-align: center; height: 29px;" scope="col">2 votes</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; text-align: right; height: 29px;">1</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( A \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( B \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( C \)</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; text-align: right; height: 29px;">2</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( B \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( C \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( B \)</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; text-align: right; height: 29px;">3</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( C \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( A \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( A \)</td>
+        </tr>
+    </tbody>
+</table>
+<p style="text-align: left;">Starting our instant runoff, we first compute the absolute majority. Counting the total number of votes&nbsp;</p>
+<p style="text-align: left;">\[ \text{Total Votes:} \quad 4 + 3 + 2 = 9 \text{ votes}. \]</p>
+<p style="text-align: left;">Then finding 50% of the total,&nbsp;</p>
+<p style="text-align: left;">\[ 50\% \text{ of } 9 = (0.50) \cdot 9 = 4.5 .\]</p>
+<p style="text-align: left;">Since we started with an odd number, we round up finding</p>
+<p style="text-align: left;">\[ \text{Absolute Majority:} \quad 4.5 \overset{\text{rounding up}}\longrightarrow 5 \text{ votes}. \]</p>
+<p style="text-align: left;">Reviewing the first choices, \( A \) has 4 votes, \( B \) has 3 votes, and \( C \) has 2 votes. No choice has an absolute majority so we eliminate the choice with the least votes, in our case \( C \), and reallocate those points to the second choice in that schedule.&nbsp;</p>
+<table style="border-collapse: collapse; width: 50.0428%; height: 116px; margin-left: auto; margin-right: auto;" border="1">
+    <caption>Eliminating \( C \)</caption>
+    <tbody>
+        <tr style="height: 29px;">
+            <th style="width: 25.0214%; height: 29px;" scope="col">Rank</th>
+            <th style="width: 25.0214%; text-align: center; height: 29px;" scope="col">4 votes</th>
+            <th style="width: 25.0214%; text-align: center; height: 29px;" scope="col">3 votes</th>
+            <th style="width: 25.0214%; text-align: center; height: 29px;" scope="col">2 votes</th>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; text-align: right; height: 29px;">1</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( A \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( B \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\(\cancel{C} \)</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; text-align: right; height: 29px;">2</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( B \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\(\cancel{C} \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( B \)</td>
+        </tr>
+        <tr style="height: 29px;">
+            <td style="width: 25.0214%; text-align: right; height: 29px;">3</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\(\cancel{C} \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( A \)</td>
+            <td style="width: 25.0214%; text-align: center; height: 29px;">\( A \)</td>
+        </tr>
+    </tbody>
+</table>
+<p>The two votes originally given to \( C \) are now passed down the schedule to \( B \). Recounting our votes, \( A \) has 4 votes and \( B \) has \( 3 + 2 = 5 \) votes. Our absolute majority was 5, thus \( B \) wins!</p>
