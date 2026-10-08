@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Quantitative Reasoning
-parent: teaching
+parent: Teaching
 has_children: false
 nav_order: 1
 ---
