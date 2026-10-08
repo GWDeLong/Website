@@ -1,11 +1,8 @@
 ---
 title: Home
 layout: home
+nav_order: 1
 ---
 
 # I need to do more with this
-
-$f(x) = 3x^2$
-$$f(x) = 3x^2$$
-\( f(x) = 3x^2 \)
-\[f(x) = 3x^2\]
+[Test Page](test/)
