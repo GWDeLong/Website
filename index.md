@@ -3,6 +3,5 @@ title: Home
 layout: home
 nav_order: 1
 ---
-
-# I need to do more with this
-[Test Page](test/)
+# Landing Page
+Hi there! I am a current graduate student at The University of Texas at San Antonio pursuing my Masters in Mathematics. 
