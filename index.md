@@ -9,8 +9,8 @@ Hi there! I am a current graduate student at The University of Texas at San Anto
 This is my personal website where I have compiled somethings about myself.
 
 # Some Links
-[CV](assets/files/CV.pdf)
-[GitHub](https://github.com/GWDeLong)
+- [CV](assets/files/CV.pdf)
+- [GitHub](https://github.com/GWDeLong)
 
 # No AI
 I am very much against the use of generative AI. I do not use AI tools and move away from any companies and/or software which embraces it. 
