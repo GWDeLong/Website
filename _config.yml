@@ -14,4 +14,4 @@ math:
 #  link: "/assets/images/not AI.png"
 
 aux_links:
-    <img src="{{site.baseurl}}/assets/images/not_AI.png" alt="drawing" width="20"/>: "www.myLinkOne.com"
+    No AI Policy: "https://gwdelong.github.io/Website/ai/"
