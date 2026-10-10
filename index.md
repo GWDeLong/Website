@@ -28,3 +28,12 @@ test
 
 test
 ![](/assets/images/not_AI.png)
+
+test
+
+<img src="{{site.baseurl}}/assets/images/not_AI.png" alt="drawing" width="200"/>
+
+test
+
+<img src="/assets/images/not_AI.png" alt="drawing" width="200"/>
+ 
