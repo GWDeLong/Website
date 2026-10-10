@@ -14,4 +14,4 @@ math:
 #  link: "/assets/images/not AI.png"
 
 aux_links:
-    <img src="/assets/images/not AI" width="30%" height="30%"/>: "www.myLinkOne.com"
+    <img src="/assets/images/not_AI.png" width="30%" height="30%"/>: "www.myLinkOne.com"
