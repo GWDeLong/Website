@@ -21,3 +21,4 @@ I am very much against the use of generative AI. I do not use AI tools and move 
 - [Better Internet Guide](https://anadraws.substack.com/p/deshittification-starter-guide?utm_campaign=post-expanded-share&utm_medium=web)
 
 <img src="/assets/images/not_AI.png"/>
+<img src="https://github.com/GWDeLong/Website/blob/main/assets/images/not_AI.png"/>
