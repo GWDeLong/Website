@@ -1,7 +1,7 @@
 ---
 layout: page
 title: No AI Policy
-nav_order: 9999
+nav_exclude: true
 ---
 
 # No AI Policy
