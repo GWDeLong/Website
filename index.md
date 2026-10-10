@@ -23,13 +23,13 @@ I am very much against the use of generative AI. I do not use AI tools and move 
 <img src="/assets/images/not_AI.png"/>
 <img src="https://github.com/GWDeLong/Website/blob/main/assets/images/not_AI.png"/>
 
-test
+Markdown
 ![]({{site.baseurl}}/assets/images/not_AI.png)
 
 test
 ![](/assets/images/not_AI.png)
 
-test
+HTML
 
 <img src="{{site.baseurl}}/assets/images/not_AI.png" alt="drawing" width="200"/>
 
