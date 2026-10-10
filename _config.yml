@@ -10,8 +10,9 @@ enable_math: true
 math:
   provider: mathjax
 
-#aux_links:
-#  link: "/assets/images/not AI.png"
-
 aux_links:
     No AI Policy: "https://gwdelong.github.io/Website/ai/"
+    
+#Code bits
+#Markdown ![]({{site.baseurl}}/assets/images/X.png)
+#HTML <img src="{{site.baseurl}}/assets/images/X.png" alt="alt text" width="200"/>
