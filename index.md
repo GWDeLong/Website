@@ -22,3 +22,4 @@ I am very much against the use of generative AI. I do not use AI tools and move 
 
 <img src="/assets/images/not_AI.png"/>
 <img src="https://github.com/GWDeLong/Website/blob/main/assets/images/not_AI.png"/>
+![]({{site.baseurl}}/assets/images/not_AI.png)
