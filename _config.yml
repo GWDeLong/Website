@@ -14,4 +14,4 @@ math:
 #  link: "/assets/images/not AI.png"
 
 aux_links:
-    #![]({{site.baseurl}}/assets/images/not_AI.png): "www.myLinkOne.com"
+    <img src="{{site.baseurl}}/assets/images/not_AI.png" alt="drawing" width="20"/>: "www.myLinkOne.com"
