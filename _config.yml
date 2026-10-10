@@ -10,5 +10,8 @@ enable_math: true
 math:
   provider: mathjax
 
+#aux_links:
+#  link: "/assets/images/not AI.png"
+
 aux_links:
-  link: "/assets/images/not AI.png"
+    <img src="/assets/images/not AI.png" width="30%" height="30%"/>: "www.myLinkOne.com"
