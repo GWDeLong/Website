@@ -11,4 +11,4 @@ math:
   provider: mathjax
 
 aux_links:
-  "/assets/images/not AI.png": https://github.com/GWDeLong/Website
+  link: "/assets/images/not AI.png"
