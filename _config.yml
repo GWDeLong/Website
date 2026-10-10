@@ -14,4 +14,5 @@ math:
 #  link: "/assets/images/not AI.png"
 
 aux_links:
-    <img src="https://github.com/GWDeLong/Website/blob/main/assets/images/not_AI.png"/>: "www.myLinkOne.com"
+    #<img src="/assets/images/not_AI.png"/>: "www.myLinkOne.com"
+    ![Image](/assets/images/not_AI.png): "www.myLinkOne.com"
