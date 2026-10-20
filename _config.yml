@@ -6,14 +6,27 @@ favicon_ico: "/assets/images/moth.ico"
 
 url: https://GWDeLong.github.io/Website
 
-enable_math: true
-math:
-  provider: mathjax
-
 aux_links:
     <img src="/Website/assets/images/not_AI.png" alt="Real Good AI Rating 0" style="height:150%;"/>: "https://gwdelong.github.io/Website/ai/"
 
+{% if page.katex %}
 
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+<!-- JavaScript -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters: [
+      { left: '$$',  right: '$$',  display: true  },
+      { left: '$',   right: '$',   display: false },
+      { left: '\\[', right: '\\]', display: true  },
+      { left: '\\(', right: '\\)', display: false }
+  ]});">
+</script>
+
+{% endif %}
 
     
 #Code bits
