@@ -11,8 +11,6 @@ math:
   provider: mathjax
 
 aux_links:
-    #No AI Policy: "https://gwdelong.github.io/Website/ai/"
-    #![No AI](assets/images/no_AI_small.png): "https://gwdelong.github.io/Website/ai/"
     <img src="/Website/assets/images/not_AI.png" alt="Real Good AI Rating 0" style="height:150%;"/>: "https://gwdelong.github.io/Website/ai/"
 
 
@@ -21,3 +19,5 @@ aux_links:
 #Code bits
 #Markdown ![]({{site.baseurl}}/assets/images/X.png)
 #HTML <img src="{{site.baseurl}}/assets/images/X.png" alt="alt text" width="200"/>
+#No AI Policy: "https://gwdelong.github.io/Website/ai/"
+#![No AI](assets/images/no_AI_small.png): "https://gwdelong.github.io/Website/ai/"
