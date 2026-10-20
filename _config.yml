@@ -12,7 +12,7 @@ math:
 
 aux_links:
     #No AI Policy: "https://gwdelong.github.io/Website/ai/"
-    [![No AI](assets/images/no_AI.png)](https://gwdelong.github.io/Website/ai/)
+    ![No AI](assets/images/no_AI.png): "https://gwdelong.github.io/Website/ai/"
     
 #Code bits
 #Markdown ![]({{site.baseurl}}/assets/images/X.png)
