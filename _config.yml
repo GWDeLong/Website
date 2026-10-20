@@ -11,7 +11,9 @@ math:
   provider: mathjax
 
 aux_links:
-    No AI Policy: "https://gwdelong.github.io/Website/ai/"
+    #No AI Policy: "https://gwdelong.github.io/Website/ai/"
+    <img src="{{site.baseurl}}/assets/images/X.png" alt="alt text" width="10"/>:
+    - "https://gwdelong.github.io/Website/ai/"
     
 #Code bits
 #Markdown ![]({{site.baseurl}}/assets/images/X.png)
