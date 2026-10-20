@@ -5,7 +5,7 @@ nav_exclude: true
 ---
 
 # No AI Policy
-I am very much against the use of generative AI. I do not use AI tools and move away from any companies and/or software which embraces it. 
+I am very much against the use of generative AI. I do not use AI tools and move away from any companies and/or software which embrace it. 
 
 ## Some Materials
 - [Leiden Declaration on Artificial Intelligence and Mathematics](https://leidendeclaration.ai/#signatories)
