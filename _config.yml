@@ -13,7 +13,7 @@ math:
 aux_links:
     #No AI Policy: "https://gwdelong.github.io/Website/ai/"
     #![No AI](assets/images/no_AI_small.png): "https://gwdelong.github.io/Website/ai/"
-    <img src="{{site.baseurl}}/assets/images/no_AI_small.png" alt="alt text"/>: "https://gwdelong.github.io/Website/ai/"
+    <img src="/Website/assets/images/not_AI_small.png" alt="Real Good AI Rating 0"/>: "https://gwdelong.github.io/Website/ai/"
 
 
 
