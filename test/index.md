@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Your Post Title"
+nav_exclude: true
 katex: true
 ---
 
