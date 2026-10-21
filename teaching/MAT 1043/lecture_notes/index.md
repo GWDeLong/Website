@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Module 1 Borda Count
+katex: true
 ---
 
 {% if page.katex %}
