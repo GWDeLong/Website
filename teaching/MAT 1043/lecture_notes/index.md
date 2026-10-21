@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Module 1: Borda Count
+title: Module 1 Borda Count
 nav_exclude: true
 ---
 
