@@ -3,6 +3,25 @@ layout: page
 title: Module 1 Borda Count
 ---
 
+{% if page.katex %}
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+
+<!-- JavaScript -->
+<script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{
+    delimiters: [
+      { left: '$$',  right: '$$',  display: true  },
+      { left: '$',   right: '$',   display: false },
+      { left: '\\\[', right: '\\\]', display: true  },
+      { left: '\\\(', right: '\\\)', display: false }
+  ]});">
+</script>
+
+{% endif %}
+
 <h2>Module 1: Borda Count</h2>
 <hr />
 <h3 style="text-align: center;">Introduction</h3>
@@ -46,14 +65,14 @@ title: Module 1 Borda Count
     </tbody>
 </table>
 <p>Despite how awful this grading scheme is, we can still find the final grade. To do so, we take the weight, Percent of Final Grade, and multiply by the associated value, Student Score. Doing so, we find</p>
-<p>\[ \text{Final Grade } = \underbrace{0.10}_{\text{Homework Weight}} \overbrace{(85)}^{\text{Student Score}}+ \underbrace{0.9}_{\text{Exam Weight}} \overbrace{(93)}^{\text{Student Score}}= 92.2 \]</p>
+<p>\\[ \text{Final Grade } = \underbrace{0.10}_{\text{Homework Weight}} \overbrace{(85)}^{\text{Student Score}}+ \underbrace{0.9}_{\text{Exam Weight}} \overbrace{(93)}^{\text{Student Score}}= 92.2 \\]</p>
 <p>The student passes the class with a grade of 92.2.</p>
 <hr />
 <h3 style="text-align: center;">Borda Count Method</h3>
 <p>We now have the tools to introduce the Borda Count.</p>
 <h4><span style="text-decoration: underline;">Definition (Borda Count).</span></h4>
 <blockquote>
-    <p>Given \( n \) choices, we assign weights based on preference. First choices have a weight of \( n \), second choices have a weight of \( n - 1 \), and so on until the last choice receiving a weight of 1. The final scores are summed, the winner is the choice with the highest score.</p>
+    <p>Given \\( n \\) choices, we assign weights based on preference. First choices have a weight of \\( n \\), second choices have a weight of \\( n - 1 \\), and so on until the last choice receiving a weight of 1. The final scores are summed, the winner is the choice with the highest score.</p>
 </blockquote>
 <p>Implementing the method with sample preference schedules we have the following.</p>
 <table style="border-collapse: collapse; width: 50.0428%; margin-left: auto; margin-right: auto;" border="1">
@@ -86,10 +105,10 @@ title: Module 1 Borda Count
     </tbody>
 </table>
 <p>We compute the scores as follows</p>
-<p>\[ \text{Total Score } = 3 (\text{\# of 1st place votes}) + 2 (\text{\# of 2nd place votes}) + 1 (\text{\# of 3rd place votes}) \]</p>
-<p>Finding the scores for \( A \), \( B \), and \( C \)</p>
+<p>\\[ \text{Total Score } = 3 (\text{\# of 1st place votes}) + 2 (\text{\# of 2nd place votes}) + 1 (\text{\# of 3rd place votes}) \\]</p>
+<p>Finding the scores for \\( A \\), \\( B \\), and \\( C \\)</p>
 <p>\begin{align*}<br />A &amp;= 3(2) + 2(2) + 1(3) = 13 \text{ points}\\<br />B &amp;= 3(3) + 2(2) + 1(2) = 15 \text{ points}\\<br />C &amp;= 3(2) + 2(3) + 1(2) = 14 \text{ points}<br />\end{align*}</p>
-<p>Choice \( B \) has the highest score, hence \( B \) wins!</p>
+<p>Choice \\( B \\) has the highest score, hence \\( B \\) wins!</p>
 <h4><span style="text-decoration: underline;">Note.</span></h4>
 <blockquote>
     <p>Other weights may be used to compute the end score such as 2, 1, and 0. As long as the weights are decreasing, the winner will not change.</p>
@@ -132,7 +151,7 @@ title: Module 1 Borda Count
 </table>
 <p>The computations of the final scores are</p>
 <p>\begin{align*}<br />A &amp;= 4(5) + 3(2) + 2(0) + 1(7) &amp;&amp;= 33 \text{ points}\\<br />B &amp;= 4(0) + 3(7) + 2(5 + 2) + 1(0) &amp;&amp;= 35 \text{ points}\\<br />C &amp;= 4(7) + 3(5) + 2(0) + 1(2) &amp;&amp;= 45 \text{ points}\\<br />D &amp;= 4(2) + 3(0) + 2(7) + 1(5) &amp;&amp;= 27 \text{ points}<br />\end{align*}</p>
-<p>We observe that \( C \) has the most points, therefore \( C \) wins.</p>
+<p>We observe that \\( C \\) has the most points, therefore \\( C \\) wins.</p>
 <h4><span style="text-decoration: underline;">Note.</span></h4>
 <blockquote>
     <p>Instant Runoff and Borda Count may not have the same winner.</p>
@@ -182,14 +201,14 @@ title: Module 1 Borda Count
     </tbody>
 </table>
 <p>Despite how awful this grading scheme is, we can still find the final grade. To do so, we take the weight, Percent of Final Grade, and multiply by the associated value, Student Score. Doing so, we find</p>
-<p>\[ \text{Final Grade } = \underbrace{0.10}_{\text{Homework Weight}} \overbrace{(85)}^{\text{Student Score}}+ \underbrace{0.9}_{\text{Exam Weight}} \overbrace{(93)}^{\text{Student Score}}= 92.2 \]</p>
+<p>\\[ \text{Final Grade } = \underbrace{0.10}_{\text{Homework Weight}} \overbrace{(85)}^{\text{Student Score}}+ \underbrace{0.9}_{\text{Exam Weight}} \overbrace{(93)}^{\text{Student Score}}= 92.2 \\]</p>
 <p>The student passes the class with a grade of 92.2.</p>
 <hr />
 <h3 style="text-align: center;">Borda Count Method</h3>
 <p>We now have the tools to introduce the Borda Count.</p>
 <h4><span style="text-decoration: underline;">Definition (Borda Count).</span></h4>
 <blockquote>
-    <p>Given \( n \) choices, we assign weights based on preference. First choices have a weight of \( n \), second choices have a weight of \( n - 1 \), and so on until the last choice receiving a weight of 1. The final scores are summed, the winner is the choice with the highest score.</p>
+    <p>Given \\( n \\) choices, we assign weights based on preference. First choices have a weight of \\( n \\), second choices have a weight of \\( n - 1 \\), and so on until the last choice receiving a weight of 1. The final scores are summed, the winner is the choice with the highest score.</p>
 </blockquote>
 <p>Implementing the method with sample preference schedules we have the following.</p>
 <table style="border-collapse: collapse; width: 50.0428%; margin-left: auto; margin-right: auto;" border="1">
@@ -222,10 +241,10 @@ title: Module 1 Borda Count
     </tbody>
 </table>
 <p>We compute the scores as follows</p>
-<p>\[ \text{Total Score } = 3 (\text{\# of 1st place votes}) + 2 (\text{\# of 2nd place votes}) + 1 (\text{\# of 3rd place votes}) \]</p>
-<p>Finding the scores for \( A \), \( B \), and \( C \)</p>
+<p>\\[ \text{Total Score } = 3 (\text{\# of 1st place votes}) + 2 (\text{\# of 2nd place votes}) + 1 (\text{\# of 3rd place votes}) \\]</p>
+<p>Finding the scores for \\( A \\), \\( B \\), and \\( C \\)</p>
 <p>\begin{align*}<br />A &amp;= 3(2) + 2(2) + 1(3) = 13 \text{ points}\\<br />B &amp;= 3(3) + 2(2) + 1(2) = 15 \text{ points}\\<br />C &amp;= 3(2) + 2(3) + 1(2) = 14 \text{ points}<br />\end{align*}</p>
-<p>Choice \( B \) has the highest score, hence \( B \) wins!</p>
+<p>Choice \\( B \\) has the highest score, hence \\( B \\) wins!</p>
 <h4><span style="text-decoration: underline;">Note.</span></h4>
 <blockquote>
     <p>Other weights may be used to compute the end score such as 2, 1, and 0. As long as the weights are decreasing, the winner will not change.</p>
@@ -268,7 +287,7 @@ title: Module 1 Borda Count
 </table>
 <p>The computations of the final scores are</p>
 <p>\begin{align*}<br />A &amp;= 4(5) + 3(2) + 2(0) + 1(7) &amp;&amp;= 33 \text{ points}\\<br />B &amp;= 4(0) + 3(7) + 2(5 + 2) + 1(0) &amp;&amp;= 35 \text{ points}\\<br />C &amp;= 4(7) + 3(5) + 2(0) + 1(2) &amp;&amp;= 45 \text{ points}\\<br />D &amp;= 4(2) + 3(0) + 2(7) + 1(5) &amp;&amp;= 27 \text{ points}<br />\end{align*}</p>
-<p>We observe that \( C \) has the most points, therefore \( C \) wins.</p>
+<p>We observe that \\( C \\) has the most points, therefore \\( C \\) wins.</p>
 <h4><span style="text-decoration: underline;">Note.</span></h4>
 <blockquote>
     <p>Instant Runoff and Borda Count may not have the same winner.</p>
