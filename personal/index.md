@@ -1,5 +1,5 @@
 ---
 layout: page
 title: Personal
-nav_order: 2
+nav_order: 10
 ---
