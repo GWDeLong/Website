@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Module 1 Borda Count
-nav_exclude: true
 ---
 
 <h2>Module 1: Borda Count</h2>
