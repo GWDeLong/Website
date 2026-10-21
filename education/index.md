@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Education
-nav_order: 2
+nav_order: 3
 ---
 # Graduate Courses Taken
 
