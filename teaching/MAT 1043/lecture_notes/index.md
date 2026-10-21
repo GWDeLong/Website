@@ -22,6 +22,8 @@ katex: true
 </script>
 
 {% endif %}
+\\[ f(x) \\]
+
 
 <h2>Module 1: Borda Count</h2>
 <hr />
