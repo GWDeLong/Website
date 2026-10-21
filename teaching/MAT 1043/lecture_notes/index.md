@@ -15,8 +15,8 @@ title: Module 1 Borda Count
     delimiters: [
       { left: '$$',  right: '$$',  display: true  },
       { left: '$',   right: '$',   display: false },
-      { left: '\\\[', right: '\\\]', display: true  },
-      { left: '\\\(', right: '\\\)', display: false }
+      { left: '\\[', right: '\\]', display: true  },
+      { left: '\\(', right: '\\)', display: false }
   ]});">
 </script>
 
