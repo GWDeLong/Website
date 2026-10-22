@@ -21,7 +21,12 @@ For transparency, I employ the Reported Engagement with AI Level or [REAL Rating
 
 ## Recommended Reading
 
-The [American Mathematics Society](https://www.ams.org/home/page) has compiled [a great list of resources](https://www.ams.org/ai/ai), some of which I have duplicated in the [Some Materials](#some-materials) section of this page.
+The [American Mathematics Society](https://www.ams.org/home/page) has compiled [a great list of resources](https://www.ams.org/ai/ai), some of which I have duplicated below among other resources.
+- [Leiden Declaration on Artificial Intelligence and Mathematics][Leiden]
+- [Buckmaster's Post: Mathematics is a subject for the young][Tao]
+- [Warwick Mathematics Institute's AI Policy][WMI]
+- [Encyclical Letter of His Holiness Leo XIV Magnifica Humanitas - THE GRANDEUR OF HUMANITY IN LIGHT OF THE PROMISES OF AI][Leo]
+- [Better Internet Guide][Deshittification]
 
 Below is an excerpt from [The University of Warwick's AI policy][WMI] that caught my eye.
 > In addition, when it comes to AI and deciding if you want to use it, it is worth being aware of the following:
@@ -44,14 +49,6 @@ Most of these tools, all of which are free, are found in the [Better Internet Gu
 - Image Editing: [GNU Image Manipulation Program (GIMP)](https://www.gimp.org)
 - Video Editing: [Kdenlive](https://kdenlive.org)
 - Audio Editing: [Audacity](https://www.audacityteam.org)
-
-## Some Materials
-
-- [Leiden Declaration on Artificial Intelligence and Mathematics][Leiden]
-- [Buckmaster's Post: Mathematics is a subject for the young][Tao]
-- [Warwick Mathematics Institute's AI Policy][WMI]
-- [Encyclical Letter of His Holiness Leo XIV Magnifica Humanitas - THE GRANDEUR OF HUMANITY IN LIGHT OF THE PROMISES OF AI][Leo]
-- [Better Internet Guide][Deshittification]
 
 [Leiden]: https://leidendeclaration.ai/#signatories
 [Tao]: https://terrytao.wordpress.com/2026/10/21/mathematics-is-a-subject-for-the-young/
