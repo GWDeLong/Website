@@ -4,9 +4,13 @@ title: No AI Policy
 nav_exclude: true
 ---
 
-# No AI Policy
+# No AI Statement
 
-I am very much against the use of [generative AI](https://en.wikipedia.org/wiki/Generative_AI). I do not use AI tools and move away from any companies and/or software which embrace it. 
+I am very much against the use of [generative AI](https://en.wikipedia.org/wiki/Generative_AI). I seldom use AI tools, for research purposes only, and move away from any companies and/or software which apply AI unethically.
+
+For transparency, I employ the Reported Engagement with AI Level or [REAL Rating](https://www.realgoodai.org/real-rating) for short, such signifiers are below.
+
+<img src="/Website/assets/images/REAL_0.png" alt="No AI" style="wwidth:25%;"/>
 
 ## Recommended Reading
 
@@ -25,6 +29,14 @@ Most of these tools, all of which are free, are found in the [Better Internet Gu
 
 - Operating System: [Zorin](https://zorin.com) or any [Linux distribution](https://www.linux.org/pages/download/)
 - Browser and Search Engine: [Vivaldi](https://vivaldi.com) with [Duck Duck Go](https://noai.duckduckgo.com) ([No-AI Extension](https://chromewebstore.google.com/detail/duckduckgo-no-ai-search/faoilnlkccdjdkpljainiiimmijofmpd))
+- File Archiver: [7-Zip](https://7-zip.org)
+- Office Products: [LibreOffice](https://www.libreoffice.org)
+- Note Taking: [Xournal++](https://xournalpp.github.io)
+- TeX Editing: [TeXstudio](https://texstudio.org)
+- Video Player: [VLC Media Player](https://www.videolan.org)
+- Image Editing: [GNU Image Manipulation Program (GIMP)](https://www.gimp.org)
+- Video Editing: [Kdenlive](https://kdenlive.org)
+- Audio Editing: [Audacity](https://www.audacityteam.org)
 
 ## Some Materials
 
