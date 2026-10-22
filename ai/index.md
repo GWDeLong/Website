@@ -10,7 +10,9 @@ I am very much against the use of [generative AI](https://en.wikipedia.org/wiki/
 
 For transparency, I employ the Reported Engagement with AI Level or [REAL Rating](https://www.realgoodai.org/real-rating) for short, such signifiers are below.
 
-<img src="/Website/assets/images/REAL_0.png" alt="No AI" style="wwidth:25%;"/>
+<img src="/Website/assets/images/REAL_0.png" alt="No AI" style="width:50px;">
+<img src="/Website/assets/images/REAL_1.png" alt="Automation" style="width:50px;">
+
 
 ## Recommended Reading
 
