@@ -1,6 +1,6 @@
 ---
 layout: page
-title: No AI Policy
+title: No AI Statement
 nav_exclude: true
 ---
 
