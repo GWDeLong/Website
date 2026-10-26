@@ -49,6 +49,7 @@ Most of these tools, all of which are free, are found in the [Better Internet Gu
 - Image Editing: [GNU Image Manipulation Program (GIMP)](https://www.gimp.org)
 - Video Editing: [Kdenlive](https://kdenlive.org)
 - Audio Editing: [Audacity](https://www.audacityteam.org)
+- Maps: [MapQuest](https://www.mapquest.com)
 
 [Leiden]: https://leidendeclaration.ai/#signatories
 [Tao]: https://terrytao.wordpress.com/2026/10/21/mathematics-is-a-subject-for-the-young/
