@@ -26,9 +26,6 @@ Dr. Popescu, Gelu [Syllabus](syllabi/MAT 5203.pdf)
 ## MAT 5283 - Linear Algebra
 Dr. Chimal-Dzul, Henry [Syllabus](syllabi/MAT 5283.pdf)
 
-## MAT 5403 - Functional Analysis
-Dr. Popescu, Gelu [Syllabus](syllabi/MAT 5403.pdf)
-
 ## MAT 5423 - Discrete Mathematics
 Dr. Iovino, Jose [Syllabus](syllabi/MAT 5423.pdf)
 
