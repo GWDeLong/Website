@@ -25,6 +25,3 @@ katex: true
 
 This is an example of inline \\(\LaTeX\\). The following is Stokes' theorem in a
 `displaymath` environment: \$$\int_{\partial \Omega} \omega = \int_{\Omega} d\omega\$$
-
-<iframe src="https://www.desmos.com/calculator/jz7h3goxe4?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-</script>
